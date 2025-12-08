@@ -109,10 +109,10 @@ body {
   background: #fff;
   padding: 50px;
   border-radius: 20px;
-  min-height: 160px;     /* ← height बढ़ा दी */
+  min-height: 160px;     
   display: flex;
   flex-direction: column;
-  justify-content: center;   /* content को center में रखेगा */
+  justify-content: center;   
   box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
   transition: 0.3s;
   margin: 10px 0;
@@ -125,14 +125,14 @@ body {
 /*************** CTA *****************/
 .cta {
   background: linear-gradient(120deg, #8ba1b5, #b6c8d8);
-  padding: 110px;          /* ↑ padding बढ़ाया */
+  padding: 110px;          
   border-radius: 25px;
   margin: 20px;
   color: black;
-  min-height: 300px;      /* ← CTA height बढ़ाई */
+  min-height: 300px;      
   display: flex;
   flex-direction: column;
-  justify-content: center; /* content middle में आएगा */
+  justify-content: center; 
 }
 
 
