@@ -1,0 +1,167 @@
+.daily-habits-card {
+  background: white;
+  border-radius: 35px;
+  padding: 28px 30px;
+  margin: 45px auto;
+  box-shadow: 0px 6px 24px rgba(0,0,0,0.09);
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  width: 420px;
+}
+
+
+.habits-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 22px;
+  background: linear-gradient(
+    90deg,
+    rgba(35,150,233,1) 0%,
+    rgba(243,105,208,1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+}
+
+
+/* ADD HABIT SECTION */
+.add-habit-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.add-habit-row input {
+  flex: 1;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+}
+
+.add-habit-row button {
+  padding: 10px 18px;
+  border-radius: 10px;
+  background: linear-gradient(
+    90deg,
+    rgba(35, 150, 233, 1) 0%,
+    rgba(243, 105, 208, 1) 100%
+  );
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+/* HABIT LIST */
+.habit-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* HABIT ITEM */
+.habit-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 18px;
+  border-radius: 20px;
+  background: #F2F2F2;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+
+.habit-item:hover {
+  background: #ececec;
+}
+
+/* CHECKBOX */
+.habit-checkbox {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  border: 2px solid #777;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+}
+
+
+.checkmark {
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+}
+
+/* WHEN COMPLETED */
+.habit-item.done {
+  background: #DFF5E3;   /* nice subtle green */
+}
+
+
+.habit-item.done p {
+  color: black;
+  font-weight: 500;
+}
+
+.habit-item.done .habit-checkbox {
+  background: white;
+  border-color: transparent;
+}
+
+.habit-item.done .checkmark {
+  color: #21A65C;
+  font-weight: 700;
+}
+
+
+/* ACTIONS SECTION */
+.habit-actions {
+  
+  display: flex;
+  gap: 6px;
+}
+
+
+.edit-btn,
+.save-btn,
+.delete-btn {
+  border: none;
+  padding: 5px 10px;
+  border-radius: 8px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+
+.edit-btn {
+  background: #fff2c6;
+}
+
+.save-btn {
+  background: #c6ffcf;
+}
+
+.delete-btn {
+  background: #ffd3d3;
+}
+
+/* EDIT INPUT */
+.edit-input {
+  flex: 1;
+  padding: 6px;
+  border-radius: 8px;
+  border: 1px solid #aaa;
+}
+
+.daily-habits-card {
+  flex: 1;
+  max-width: 600px;
+  min-width: 460px;
+}
+
