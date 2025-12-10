@@ -1,0 +1,76 @@
+.weekly-card {
+  width: 48%;
+  min-width: 260px;
+  background: white;
+  border-radius: 24px;
+  padding: 28px 32px;
+  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.12);
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  transform: translateY(0px);
+  transition: all 0.25s ease;
+}
+
+
+.weekly-card {
+  animation: fadeUp 0.45s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+
+.weekly-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.weekly-average {
+  font-size: 15px;
+  font-weight: 500;
+  opacity: 0.8;
+  margin-bottom: 2px;
+}
+
+.weekly-chart-wrapper {
+  width: 100%;
+  height: 170px;
+}
+
+/* GRID FOR MULTIPLE CHART ROWS */
+.charts-grid {
+  display: flex;
+  justify-content: center;     /* ⬅ centers all cards */
+  flex-wrap: wrap;
+  gap: 32px;                   /* clean spacing between cards */
+  padding: 30px 10px;          /* soft edges */
+}
+
+
+/* Tooltip styling (optional) */
+.recharts-tooltip-wrapper {
+  font-family: "Poppins";
+  font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .weekly-card {
+    width: 100%;
+    min-width: auto;
+  }
+}
