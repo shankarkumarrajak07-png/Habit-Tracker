@@ -1,8 +1,10 @@
 import{Link} from "react-router-dom";
 import Buttons from "../ui/Button";
+import habitus from "../../assets/habitus.png";
 export default function CTA() {
   return (
     <section className="cta">
+      <span><img src={habitus} alt="logo" className="logo-cta"/></span>
       <h2 className="cta-title">Ready to build better habits?</h2>
 
       <p className="cta-text">

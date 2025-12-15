@@ -1,3 +1,4 @@
+import{Link} from "react-router-dom";
 import Buttons from "../ui/Button";
 import "../../styles/SignUp.css";
 
@@ -28,7 +29,8 @@ export default function SignUpForm() {
       <Buttons className="signup-btn">Create Account</Buttons>
 
       <p className="signup-switch">
-        Already have an account? <span>Login</span>
+        Already have an account? <Link to="/login" >
+        <span>Login</span> </Link>
       </p>
     </form>
   );

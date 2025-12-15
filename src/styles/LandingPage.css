@@ -1,3 +1,23 @@
+.logo-img {
+  width: 55px;
+  height: 55px;
+  object-fit: contain;
+  margin-right: 10px;
+}
+.logo-cta {
+  width: 250px;
+  height: 250px;
+  object-fit: contain;
+  margin-right: 10px;
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #009dec, #fc67cf);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
 
 body {
   background: linear-gradient(135deg, #ead3ff, #eaeaea);
@@ -48,21 +68,23 @@ body {
 }
 
 /* Floating Animation */
-@keyframes float {
+@keyframes float{
   0% { transform: translateY(0px); }
-  50% { transform: translateY(-18px); }
+  50% { transform: translateY(-40px); }
   100% { transform: translateY(0px); }
 }
 
 .hero-title {
   font-size: 80px;
   font-weight: bold;
+  color: black;
 }
 
 .hero-sub {
   margin-top: 80px;
   font-size: 30px;
   opacity: 0.9;
+  color: black;
 }
 
 .hero-btn {
@@ -125,8 +147,10 @@ body {
 /*************** CTA *****************/
 .cta {
   background: linear-gradient(120deg, #8ba1b5, #b6c8d8);
-  padding: 110px;          
+  padding: 20px;          
   border-radius: 25px;
+  padding-bottom: 70px;
+  padding-left: 50px;
   margin: 20px;
   color: black;
   min-height: 300px;      
@@ -169,7 +193,7 @@ body {
 }
 
 /* Brand section */
-.footer-brand h2 {
+.footer-brand h1 {
   font-size: 50px;
   margin-bottom: 10px;
 }

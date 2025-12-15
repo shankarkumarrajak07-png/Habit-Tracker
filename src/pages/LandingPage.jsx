@@ -11,11 +11,17 @@ export default function LandingPage() {
     <div className="app-root">
       <Navbar />
       <main>
+        <div id='home'>
         <Hero />
+        </div>
+        <div id='feature'>
         <Features />
+        </div>
         <CTA />
       </main>
+      <div id='about'>
       <Footer />
+      </div>
     </div>
   )
 }

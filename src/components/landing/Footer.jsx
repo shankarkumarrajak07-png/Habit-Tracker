@@ -4,7 +4,9 @@ export default function Footer() {
       <div className="footer-container">
 
         <div className="footer-brand">
-          <h2>Habitus</h2>
+          <h1 className="logo">
+        Habit<span className="gradient-text">us</span>
+      </h1>
           <p>
             Track your daily routines, stay consistent,<br />
             and turn goals into habits — all in one beautiful app.

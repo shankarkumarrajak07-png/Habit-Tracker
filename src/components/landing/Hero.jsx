@@ -1,6 +1,7 @@
 import{Link} from "react-router-dom";
+import Snowfall from "react-snowfall";
 export default function Hero() {
-  return (
+  return ( 
     <section className="hero">
       <div className="circle c1"></div>
       <div className="circle c2"></div>
@@ -22,7 +23,7 @@ export default function Hero() {
       <div className="circle c18"></div>
       <div className="circle c19"></div>
       <div className="circle c20"></div>
-      
+      <Snowfall color="white"/>
 
       <h1 className="hero-title">
         Build Better Habits. <br /> One Day at a Time.

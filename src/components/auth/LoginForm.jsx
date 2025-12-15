@@ -1,3 +1,4 @@
+import{Link} from "react-router-dom";
 import { useState } from "react";
 import Buttons from "../ui/Button";
 
@@ -39,7 +40,8 @@ export default function LoginForm() {
       <Buttons className="login-bt" type="submit">Login</Buttons>
 
       <p className="signup-text">
-        Don’t have an account? <span>Create Account</span>
+        Don’t have an account? <Link to="/signup" >
+        <span>Create Account</span></Link>
       </p>
     </form>
   );
