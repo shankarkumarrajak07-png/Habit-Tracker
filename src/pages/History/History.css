@@ -1,0 +1,279 @@
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ================= PAGE WRAPPER ================= */
+.history-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-top: 90px; /* for fixed header */
+  background: transparent; /* allow global animated background */
+  font-family: "Poppins", sans-serif;
+  color: #333;
+}
+
+/* ================= CONTENT CONTAINER ================= */
+.history-container {
+  flex: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 24px 60px;
+  width: 100%;
+}
+
+/* ================= TITLE CARD ================= */
+.history-title-card {
+  background: white;
+  border-radius: 20px;
+  padding: 32px 40px;
+  text-align: center;
+  margin-bottom: 40px;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+.history-title-card h2 {
+  font-size: 28px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.history-title-card p {
+  margin-top: 6px;
+  font-size: 15px;
+  color: #718096;
+}
+
+/* ================= FILTER BAR ================= */
+.filter-card {
+  background: white;
+  border-radius: 18px;
+  padding: 22px;
+  display: flex;
+  gap: 16px;
+  margin-bottom: 48px;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+}
+
+.filter-dropdown,
+.filter-input {
+  padding: 14px 18px;
+  font-size: 15px;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+  background: #f8fafc;
+  font-family: "Poppins", sans-serif;
+  color: #4a5568;
+  transition: 0.25s ease;
+}
+
+.filter-dropdown {
+  flex: 1;
+  cursor: pointer;
+}
+
+.filter-input {
+  flex: 2;
+}
+
+.filter-dropdown:focus,
+.filter-input:focus {
+  outline: none;
+  border-color: #2396e9;
+  box-shadow: 0 0 0 3px rgba(35, 150, 233, 0.15);
+}
+
+/* ================= SEARCH BUTTON ================= */
+.filter-button {
+  padding: 14px 30px;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 0.05rem;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(90deg, #2396e9, #f369d0);
+  color: white;
+  position: relative;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+}
+
+/* text layer */
+.filter-button span {
+  position: relative;
+  z-index: 2;
+  transition: color 0.4s;
+}
+
+/* animated overlay */
+.filter-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -10%;
+  width: 120%;
+  height: 100%;
+  background: #000;
+  transform: skew(30deg);
+  transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+  z-index: 1;
+}
+
+.filter-button:hover::before {
+  transform: translate3d(100%, 0, 0);
+}
+
+.filter-button:hover span {
+  color: black;
+}
+
+/* ================= SECTION TITLES ================= */
+.history-section-title {
+  margin: 48px 0 28px;
+  font-size: 22px;
+  font-weight: 600;
+  text-align: center;
+  color: #2d3748;
+  position: relative;
+  padding-bottom: 12px;
+}
+
+.history-section-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #2396e9, #f369d0);
+}
+
+/* ================= GRID ================= */
+.history-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 28px;
+  margin-bottom: 60px;
+}
+
+/* ================= HABIT CARD ================= */
+.history-card {
+  background: white;
+  border-radius: 18px;
+  padding: 28px 26px;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  transition: 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.history-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  background: linear-gradient(90deg, #2396e9, #f369d0);
+}
+
+.history-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+}
+
+.history-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.history-card p {
+  font-size: 15px;
+  color: #4a5568;
+}
+
+/* ================= HEALTH CARD ================= */
+.health-history-card {
+  background: white;
+  border-radius: 18px;
+  padding: 28px 30px;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  transition: 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.health-history-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  background: linear-gradient(90deg, #2396e9, #f369d0);
+}
+
+.health-history-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.card-item {
+  font-size: 15px;
+  color: #4a5568;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-date {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #edf2f7;
+  font-size: 14px;
+  font-weight: 500;
+  color: #2396e9;
+}
+
+/* ================= BACK BUTTON ================= */
+.history-btn-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .filter-card {
+    flex-direction: column;
+  }
+
+  .filter-dropdown,
+  .filter-input,
+  .filter-button {
+    width: 100%;
+  }
+
+  .history-cards-grid {
+    grid-template-columns: 1fr;
+  }
+}

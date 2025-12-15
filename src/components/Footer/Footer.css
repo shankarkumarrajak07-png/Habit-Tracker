@@ -1,0 +1,136 @@
+/* ===== FOOTER BASE ===== */
+.footer {
+  margin-top: 120px;
+  width: 100%;
+  position: relative;
+  background:
+    radial-gradient(
+      1200px 400px at 50% -200px,
+      rgba(243, 105, 208, 0.18),
+      transparent 60%
+    ),
+    linear-gradient(135deg, #0b1026 0%, #0d153a 100%);
+  color: white;
+  padding: 80px 48px 32px;
+  box-shadow:
+    0 40px 100px rgba(0, 0, 0, 0.55),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  overflow: hidden;
+}
+
+/* subtle vignette */
+.footer::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      ellipse at center,
+      transparent 45%,
+      rgba(0, 0, 0, 0.45) 100%
+    );
+  pointer-events: none;
+}
+
+/* ===== MAIN LAYOUT ===== */
+.footer-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 80px;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+}
+
+/* ===== BRAND SECTION ===== */
+.footer-brand {
+  max-width: 520px;
+}
+
+.footer-logo {
+  font-size: 52px;
+  font-weight: 700;
+  margin-bottom: 18px;
+  letter-spacing: -0.5px;
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #2396e9, #f369d0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.footer-description {
+  font-size: 18px;
+  line-height: 1.7;
+  opacity: 0.82;
+  color: #d1d5db;
+}
+
+/* ===== CONTACT SECTION ===== */
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  text-align: right;
+}
+
+.footer-contact-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  gap: 14px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #e5e7eb;
+}
+
+.footer-icon {
+  font-size: 20px;
+  margin-top: 3px;
+  color: #f369d0;
+  flex-shrink: 0;
+}
+
+/* ===== BOTTOM COPYRIGHT ===== */
+.footer-bottom {
+  margin-top: 70px;
+  padding-top: 22px;
+  text-align: center;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.55);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  position: relative;
+  z-index: 1;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .footer {
+    padding: 64px 28px 28px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 48px;
+  }
+
+  .footer-contact {
+    text-align: center;
+    align-items: center;
+  }
+
+  .footer-contact-item {
+    justify-content: center;
+  }
+}
+
+/* ===== ROUNDED CARD FEEL ON LARGE SCREENS ===== */
+@media (min-width: 1200px) {
+  .footer {
+    border-radius: 28px;
+  }
+}
