@@ -76,8 +76,11 @@
   color: #444;
 }
 
-.signup-switch span {
+.signup-switch a {
   color: #7a4bff;
   font-weight: 600;
   cursor: pointer;
+}
+.signup-switch a {
+  text-decoration: none;
 }

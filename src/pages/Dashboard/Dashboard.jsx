@@ -26,6 +26,7 @@ import { WeeklyWaterChart } from "../../components/Charts/WeeklyWaterChart";
 import { WeeklyMoodChart } from "../../components/Charts/WeeklyMoodChart";
 
 export default function Dashboard() {
+
   const [dateTime, setDateTime] = useState(new Date());
   const [streak, setStreak] = useState(0);
   const [weather, setWeather] = useState(null);

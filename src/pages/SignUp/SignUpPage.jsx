@@ -1,5 +1,6 @@
 import SignUpForm from "../../components/auth/SignUpForm"
 import "./SignUp.css"
+import React from "react";
 
 export default function SignUpPage() {
   return (

@@ -53,11 +53,7 @@ export default function Header({ variant = "app" }) {
               <NavLink to="/profile" className={({ isActive }) => isActive ? "header-link active" : "header-link"}>
                 Profile
               </NavLink>
-
-              <NavLink to="/onboarding" className={({ isActive }) => isActive ? "header-link active" : "header-link"}>
-                Onboarding
-              </NavLink>
-
+              
               <Buttons className="logout-btn" onClick={handleLogout}>
                 Log Out
               </Buttons>
@@ -68,4 +64,4 @@ export default function Header({ variant = "app" }) {
       </div>
     </header>
   );
-};
+}

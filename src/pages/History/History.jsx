@@ -3,6 +3,7 @@ import  Header  from "../../components/Header/Header"
 import Footer from "../../components/Footer/Footer";
 import { useNavigate } from "react-router-dom";
 import Buttons from "../../components/ui/Button";
+import React from "react";
 
 export default function History() {
   const navigate = useNavigate();

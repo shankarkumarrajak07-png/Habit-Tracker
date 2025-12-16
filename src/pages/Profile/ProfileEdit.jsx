@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { FiEye, FiEyeOff, FiCamera } from "react-icons/fi";
 import "./ProfileEdit.css";
 import { useNavigate } from "react-router-dom";
+import React from "react";
 
 const ProfileEdit = () => {
   const navigate = useNavigate();

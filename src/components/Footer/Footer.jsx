@@ -1,3 +1,4 @@
+// Footer.jsx
 import React from "react";
 import { FiMapPin, FiMail } from "react-icons/fi";
 import "./Footer.css";
@@ -14,8 +15,7 @@ export default function Footer(){
           </h1>
 
           <p className="footer-description">
-            Track your daily routines, stay consistent,
-            and turn goals into habits — all in one beautiful app.
+            Track daily routines and turn goals into habits — all in one beautiful app.
           </p>
         </div>
 

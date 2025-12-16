@@ -1,5 +1,6 @@
 // MoodSelector.jsx
 import "./MoodSelector.css";
+import React from "react";
 
 export const MoodSelector = ({ mood, setMood }) => {
   const moods = [

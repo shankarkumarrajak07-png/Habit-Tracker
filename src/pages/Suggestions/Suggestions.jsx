@@ -3,6 +3,8 @@ import  Header  from "../../components/Header/Header"
 import Footer from "../../components/Footer/Footer";
 import { useLocation, useNavigate } from "react-router-dom";
 import Buttons from "../../components/ui/Button"
+import React from "react";
+
 
 export default function Suggestions() {
   const navigate = useNavigate();
@@ -88,12 +90,10 @@ export default function Suggestions() {
             </p>
 
             <div className="suggestion-btn-wrapper">
-              <Buttons
-                className="login-btn"
-                onClick={() => navigate("/dashboard")}
-              >
-                ← Go to Dashboard
-              </Buttons>
+              <Buttons onClick={() => navigate("/dashboard")}>
+  ← Go to Dashboard
+</Buttons>
+
             </div>
           </div>
         ) : (

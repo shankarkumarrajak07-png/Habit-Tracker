@@ -56,8 +56,6 @@ export default function Hero() {
   </button>
   </Link>
 </div>
-
-     
-    </section>
+</section>
   );
 }

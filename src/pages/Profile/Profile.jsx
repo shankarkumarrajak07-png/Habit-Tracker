@@ -3,6 +3,7 @@ import  Header  from "../../components/Header/Header"
 import Footer from "../../components/Footer/Footer";
 import { useNavigate } from "react-router-dom";
 import { FiEdit3 } from "react-icons/fi";
+import React from "react";
 
 function Profile() {
   const navigate = useNavigate();

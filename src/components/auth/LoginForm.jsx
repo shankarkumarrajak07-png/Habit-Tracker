@@ -1,5 +1,7 @@
 import { useState } from "react";
 import Buttons from "../ui/Button";
+import React from "react";
+import { Link } from "react-router-dom";
 
 export default function LoginForm() {
   const [email, setEmail] = useState("");
@@ -13,11 +15,10 @@ export default function LoginForm() {
 
   return (
     <form className="login-form" onSubmit={handleSubmit}>
-
       <div className="input-group">
         <label>Email</label>
-        <input 
-          type="email" 
+        <input
+          type="email"
           placeholder="Enter your email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
@@ -27,8 +28,8 @@ export default function LoginForm() {
 
       <div className="input-group">
         <label>Password</label>
-        <input 
-          type="password" 
+        <input
+          type="password"
           placeholder="Enter your password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
@@ -36,10 +37,12 @@ export default function LoginForm() {
         />
       </div>
 
-      <Buttons className="login-bt" type="submit">Login</Buttons>
+      <Buttons className="login-bt" type="submit">
+        Login
+      </Buttons>
 
       <p className="signup-text">
-        Don’t have an account? <span>Create Account</span>
+        Don’t have an account? <Link to="/signup">Create Account</Link>
       </p>
     </form>
   );

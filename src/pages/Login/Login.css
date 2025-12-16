@@ -73,8 +73,11 @@
   font-size: 14px;
 }
 
-.signup-text span {
+.signup-text a {
   color: #6a4cff;
   font-weight: 600;
   cursor: pointer;
+}
+.signup-text a {
+  text-decoration: none;
 }

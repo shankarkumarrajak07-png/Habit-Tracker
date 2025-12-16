@@ -1,5 +1,6 @@
 import Buttons from "../ui/Button";
-import "../../styles/SignUp.css";
+import React from "react";
+import { Link } from "react-router-dom";
 
 export default function SignUpForm() {
   return (
@@ -27,8 +28,8 @@ export default function SignUpForm() {
 
       <Buttons className="signup-btn">Create Account</Buttons>
 
-      <p className="signup-switch">
-        Already have an account? <span>Login</span>
+       <p className="signup-switch">
+        Already have an account? <Link to="/login">Login</Link>
       </p>
     </form>
   );
