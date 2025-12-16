@@ -1,0 +1,445 @@
+/* ---- DASHBOARD CONTAINER ---- */
+.dashboard-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: transparent;
+   padding-top: 90px;
+}
+
+.dashboard-container {
+  flex: 1;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ---- PROFESSIONAL WELCOME CARD ---- */
+.dashboard-welcome-card {
+  background: linear-gradient(90deg, #2396e9 0%, #f369d0 100%);
+  border-radius: 20px;
+  padding: 32px 40px;
+  margin: 32px auto 48px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  box-sizing: border-box;
+  width: 100%;
+  box-shadow: 0 10px 30px rgba(35, 150, 233, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.dashboard-welcome-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #ff6b9d 0%, #ffd166 100%);
+}
+
+/* LEFT SECTION PROFESSIONAL TYPOGRAPHY */
+.welcome-left {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+  z-index: 1;
+}
+
+.welcome-left h1 {
+  font-size: 34px;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: -0.5px;
+}
+
+.welcome-left h3 {
+  font-size: 18px;
+  margin: 0;
+  opacity: 0.92;
+  font-weight: 500;
+}
+
+.welcome-left .datetime {
+  font-size: 15px;
+  opacity: 0.8;
+  margin: 4px 0 12px 0;
+  font-weight: 400;
+}
+
+.welcome-left h2 {
+  font-size: 42px;
+  margin: 8px 0;
+  font-weight: 700;
+  background: linear-gradient(90deg, #ffffff 0%, #e6f7ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.welcome-left p {
+  font-size: 15px;
+  margin: 4px 0;
+  opacity: 0.9;
+}
+
+.city-pin {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  opacity: 0.85;
+  margin-top: 8px;
+}
+
+/* RIGHT SECTION */
+.welcome-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 16px;
+  z-index: 1;
+}
+
+.animation-container {
+  width: 200px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.welcome-animation {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* STREAK BADGE - Professional Design */
+
+/* Add this for react-hot-toast to always appear on top right */
+.react-hot-toast {
+  position: fixed;
+  top: 1rem !important;
+  right: 1rem !important;
+  z-index: 99999 !important;
+}
+
+.streak-badge {
+  background: linear-gradient(90deg, #ffd166 0%, #ff9a3c 100%);
+  padding: 10px 24px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(255, 154, 60, 0.3);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.streak-badge::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.7s;
+}
+
+.streak-badge:hover::before {
+  left: 100%;
+}
+
+.streak-badge:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(255, 154, 60, 0.4);
+}
+
+.streak-badge:active {
+  transform: translateY(-1px);
+}
+
+/* WEATHER SECTION - Balanced */
+.weather-block {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 12px 20px;
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.weather-main-icon svg {
+  width: 60px;
+  height: 60px;
+  color: white;
+  filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.2));
+}
+
+.weather-text h3 {
+  font-size: 18px;
+  margin: 0;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+.weather-text p {
+  font-size: 14px;
+  margin: 4px 0 0;
+  opacity: 0.9;
+  font-weight: 400;
+}
+
+/* SECTION CONTAINERS */
+.section-container {
+  margin-bottom: 64px;
+  width: 100%;
+}
+
+/* SECTION HEADER PILL - Professional Design */
+.section-header-pill {
+  background: linear-gradient(90deg, #2396e9 0%, #f369d0 100%);
+  color: white;
+  padding: 14px 36px;
+  border-radius: 50px;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  width: fit-content;
+  margin: 0 auto 32px auto;
+  box-shadow: 0 6px 20px rgba(35, 150, 233, 0.2);
+  letter-spacing: 0.3px;
+  position: relative;
+  overflow: hidden;
+  border: none;
+  cursor: default;
+  transition: all 0.3s ease;
+}
+
+.section-header-pill::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #ff6b9d 0%, #ffd166 100%);
+}
+
+.section-header-pill:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(35, 150, 233, 0.3);
+}
+
+/* PROFESSIONAL 2-COLUMN GRID FOR CARDS */
+.cards-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  width: 100%;
+  margin: 0 auto;
+  align-items: stretch;
+}
+
+/* Consistent card styling */
+.cards-row > div {
+  background: white;
+  border-radius: 20px;
+  padding: 28px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+.cards-row > div::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #2396e9 0%, #f369d0 100%);
+}
+
+.cards-row > div:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* CHARTS GRID */
+.charts-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.charts-grid > div {
+  background: white;
+  border-radius: 20px;
+  padding: 28px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+.charts-grid > div::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #2396e9 0%, #f369d0 100%);
+}
+
+.charts-grid > div:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* WEATHER LOADING */
+.weather-loading {
+  text-align: center;
+  padding: 40px;
+  color: #666;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* ===== MOBILE RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .dashboard-container {
+    padding: 0 16px;
+  }
+  
+  .dashboard-welcome-card {
+    padding: 28px 24px;
+    flex-direction: column;
+    gap: 24px;
+    text-align: center;
+  }
+  
+  .welcome-left {
+    align-items: center;
+  }
+  
+  .welcome-right {
+    align-items: center;
+    width: 100%;
+  }
+  
+  .weather-block {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .cards-row,
+  .charts-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  
+  .section-header-pill {
+    font-size: 16px;
+    padding: 12px 28px;
+    margin-bottom: 24px;
+  }
+  
+  .cards-row > div,
+  .charts-grid > div {
+    min-height: 280px;
+    padding: 24px;
+  }
+  
+  .welcome-left h1 {
+    font-size: 28px;
+  }
+  
+  .welcome-left h2 {
+    font-size: 36px;
+  }
+  
+  .animation-container {
+    width: 180px;
+    height: 135px;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-welcome-card {
+    padding: 24px 20px;
+    margin: 24px auto 32px auto;
+  }
+  
+  .welcome-left h1 {
+    font-size: 24px;
+  }
+  
+  .welcome-left h2 {
+    font-size: 32px;
+  }
+  
+  .streak-badge {
+    padding: 8px 20px;
+    font-size: 14px;
+  }
+  
+  .weather-main-icon svg {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+/* Animation for streak success */
+.success-pulse {
+  animation: pulse 0.6s ease;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* Fade in animation */
+@keyframes fadeUp {
+  0% { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.section-container {
+  animation: fadeUp 0.5s ease forwards;
+  opacity: 0;
+}
+
+.section-container:nth-child(1) { animation-delay: 0.1s; }
+.section-container:nth-child(2) { animation-delay: 0.2s; }
+.section-container:nth-child(3) { animation-delay: 0.3s; }

@@ -1,0 +1,131 @@
+.health-card {
+  background: white;
+  border-radius: 35px;
+  padding: 28px 30px;
+  margin-top: 45px;
+  box-shadow: 0px 6px 24px rgba(0,0,0,0.09);
+  font-family: "Poppins", sans-serif;
+
+  flex: 1;
+  max-width: 600px;
+  min-width: 460px;
+}
+
+
+/* Title with gradient like habits card */
+.health-title {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 22px;
+  text-align: center;
+  background: linear-gradient(
+    90deg,
+    rgba(35, 150, 233, 1) 0%,
+    rgba(243, 105, 208, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.health-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* each health row */
+.health-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background: #f4f4f4;
+  border-radius: 18px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+/* value text */
+.health-value {
+  font-weight: 600;
+  margin-right: 8px;
+}
+
+/* edit button */
+.health-edit-btn,
+.health-save-btn {
+  border: none;
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.health-edit-btn {
+  background: #fff2c6;
+}
+
+.health-save-btn {
+  background: #c6ffcf;
+}
+
+/* inline edit input */
+.health-edit-input {
+  width: 120px;
+  padding: 6px 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  margin-right: 6px;
+}
+
+/* Add new health log row */
+.add-log-row {
+  cursor: pointer;
+  opacity: 0.85;
+}
+
+.add-log-row:hover {
+  opacity: 1;
+  background: #e7e7e7;
+}
+
+/* Add form at bottom */
+.health-add-form {
+  margin-top: 18px;
+  padding: 14px 16px;
+  border-radius: 18px;
+  background: #f8f8f8;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.health-add-form h3 {
+  font-size: 16px;
+  margin: 0 0 4px 0;
+}
+
+.health-add-form input {
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.health-add-save-btn {
+  margin-top: 6px;
+  padding: 8px 14px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(
+    90deg,
+    rgba(35, 150, 233, 1) 0%,
+    rgba(243, 105, 208, 1) 100%
+  );
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+

@@ -1,0 +1,401 @@
+/* ===== PAGE WRAPPER ===== */
+.suggestions-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, #f8f9ff 0%, #f5f7ff 100%);
+}
+
+/* ===== CENTERED CONTENT AREA ===== */
+.suggestions-container {
+  flex: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 24px 80px;
+  width: 100%;
+}
+
+/* ===== TITLE CARD ===== */
+.suggestions-title-card {
+  background: white;
+  border-radius: 24px;
+  padding: 40px 48px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.06);
+  text-align: center;
+  margin-bottom: 48px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+}
+
+.suggestions-title-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, #2396e9, #f369d0);
+  border-radius: 24px 24px 0 0;
+}
+
+.suggestions-title-card h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #1a1a1a;
+  letter-spacing: -0.5px;
+}
+
+.suggestions-title-card p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ===== MAIN BMI SUMMARY CARD ===== */
+.bmi-summary-card {
+  background: white;
+  border-radius: 24px;
+  padding: 48px 40px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+  margin-bottom: 64px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+}
+
+.bmi-summary-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, #2396e9, #f369d0);
+  border-radius: 24px 24px 0 0;
+}
+
+.bmi-value {
+  font-size: 56px;
+  font-weight: 800;
+  margin-bottom: 12px;
+  background: linear-gradient(135deg, #2396e9 0%, #f369d0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: -1px;
+  line-height: 1;
+}
+
+.bmi-status {
+  font-size: 20px;
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 24px;
+}
+
+/* BMI Status Indicator */
+.bmi-indicator {
+  width: 80%;
+  height: 10px;
+  background: #f0f0f0;
+  border-radius: 10px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.bmi-indicator-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #2396e9, #f369d0);
+  border-radius: 10px;
+  width: 60%; /* Dynamic width based on BMI */
+  transition: width 1s ease;
+}
+
+/* ===== SECTION HEADER PILL ===== */
+.suggestions-section-pill {
+  background: linear-gradient(135deg, #2396e9 0%, #f369d0 100%);
+  color: white;
+  padding: 18px 48px;
+  border-radius: 50px;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  width: fit-content;
+  margin: 0 auto 48px auto;
+  box-shadow: 0 8px 30px rgba(35, 150, 233, 0.25);
+  letter-spacing: -0.3px;
+  position: relative;
+  overflow: hidden;
+}
+
+.suggestions-section-pill::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.suggestions-section-pill:hover::before {
+  left: 100%;
+}
+
+/* ===== TWO COLUMN GRID ===== */
+.suggestions-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  margin-bottom: 80px;
+}
+
+/* ===== SUGGESTION CARD ===== */
+.suggestion-card {
+  background: white;
+  border-radius: 24px;
+  padding: 36px 40px;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.suggestion-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, #2396e9, #f369d0);
+  border-radius: 24px 24px 0 0;
+  transition: height 0.3s ease;
+}
+
+.suggestion-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+}
+
+.suggestion-card:hover::before {
+  height: 6px;
+}
+
+.suggestion-card h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #1a1a1a;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  letter-spacing: -0.3px;
+}
+
+.suggestion-card h3::before {
+  content: "✓";
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  background: linear-gradient(135deg, #2396e9, #f369d0);
+  color: white;
+  border-radius: 50%;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* ===== LIST ===== */
+.suggestion-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex: 1;
+}
+
+.suggestion-card li {
+  font-size: 16px;
+  padding: 14px 0;
+  color: #555;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  line-height: 1.5;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  transition: color 0.3s ease;
+}
+
+.suggestion-card li:last-child {
+  border-bottom: none;
+}
+
+.suggestion-card li:hover {
+  color: #2396e9;
+}
+
+.suggestion-card li::before {
+  content: "•";
+  color: #f369d0;
+  font-size: 24px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+/* ===== DASHBOARD BUTTON ===== */
+.suggestion-btn-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+  margin-bottom: 40px;
+}
+
+.suggestion-btn-wrapper .back-dashboard-btn {
+  background: linear-gradient(135deg, #2396e9 0%, #f369d0 100%);
+  color: white;
+  border: none;
+  padding: 18px 48px;
+  border-radius: 50px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 30px rgba(35, 150, 233, 0.25);
+  letter-spacing: -0.3px;
+}
+
+.suggestion-btn-wrapper .back-dashboard-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(35, 150, 233, 0.35);
+}
+
+/* ===== NO DATA CARD ===== */
+.no-data-card {
+  background: white;
+  border-radius: 24px;
+  padding: 60px 40px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  margin: 40px auto;
+  max-width: 600px;
+  position: relative;
+  overflow: hidden;
+}
+
+.no-data-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, #2396e9, #f369d0);
+  border-radius: 24px 24px 0 0;
+}
+
+.no-data-card .back-dashboard-btn {
+  margin-top: 32px;
+  background: linear-gradient(135deg, #2396e9 0%, #f369d0 100%);
+  color: white;
+  border: none;
+  padding: 16px 40px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 30px rgba(35, 150, 233, 0.25);
+}
+
+.no-data-card .back-dashboard-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(35, 150, 233, 0.35);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .suggestions-container {
+    padding: 80px 20px 60px;
+  }
+  
+  .suggestions-grid {
+    gap: 32px;
+  }
+}
+
+@media (max-width: 900px) {
+  .suggestions-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  
+  .suggestions-title-card,
+  .bmi-summary-card,
+  .suggestion-card {
+    padding: 32px 28px;
+  }
+  
+  .bmi-value {
+    font-size: 48px;
+  }
+  
+  .suggestions-section-pill {
+    padding: 16px 36px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 640px) {
+  .suggestions-container {
+    padding: 60px 16px 40px;
+  }
+  
+  .suggestions-title-card h2 {
+    font-size: 26px;
+  }
+  
+  .bmi-value {
+    font-size: 40px;
+  }
+  
+  .bmi-status {
+    font-size: 18px;
+  }
+  
+  .suggestion-card h3 {
+    font-size: 20px;
+  }
+  
+  .suggestion-card li {
+    font-size: 15px;
+    padding: 12px 0;
+  }
+  
+  .suggestion-btn-wrapper .back-dashboard-btn,
+  .no-data-card .back-dashboard-btn {
+    padding: 16px 32px;
+    font-size: 16px;
+    width: 100%;
+  }
+}
+/* FORCE CENTER THE DASHBOARD BUTTON */
+.suggestion-btn-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.suggestion-btn-wrapper .back-dashboard-btn {
+  margin: 0 auto;
+}
