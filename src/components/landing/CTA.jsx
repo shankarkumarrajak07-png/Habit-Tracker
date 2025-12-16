@@ -1,5 +1,6 @@
 import{Link} from "react-router-dom";
 import Buttons from "../ui/Button";
+import React from "react";
 export default function CTA() {
   return (
     <section className="cta">

@@ -1,70 +1,49 @@
-<<<<<<< Updated upstream
- @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
- *{
-  margin: 0;
-=======
-/* ================= GLOBAL BACKGROUND ================= */
-html,
-body {
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
   min-height: 100vh;
   width: 100%;
->>>>>>> Stashed changes
   font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
 
-  /* Base */
   background-color: #ffffff;
 
-  /* Soft layered gradients (theme-accurate) */
   background-image:
-    radial-gradient(
-      circle at 15% 20%,
-      rgba(35, 150, 233, 0.22),
-      transparent 55%
-    ),
-    radial-gradient(
-      circle at 85% 65%,
-      rgba(243, 105, 208, 0.22),
-      transparent 55%
-    ),
-    radial-gradient(
-      circle at 50% 90%,
-      rgba(140, 180, 255, 0.16),
-      transparent 60%
-    );
+    radial-gradient(circle at 20% 25%, rgba(35,150,233,0.22), transparent 55%),
+    radial-gradient(circle at 80% 65%, rgba(243,105,208,0.22), transparent 55%),
+    radial-gradient(circle at 50% 90%, rgba(140,180,255,0.18), transparent 60%);
 
-  background-size: 140% 140%;
+  background-size: 120% 120%;
   background-attachment: fixed;
-
-  /* ONE calm animation */
-  animation: backgroundDrift 22s ease-in-out infinite;
+  animation: backgroundFlow 18s ease-in-out infinite;
 }
 
-/* Root stays transparent so background shows */
 #root {
   min-height: 100vh;
   width: 100%;
   background: transparent;
 }
 
-/* ================= ANIMATION ================= */
-@keyframes backgroundDrift {
+@keyframes backgroundFlow {
   0% {
     background-position:
       0% 0%,
       100% 100%,
       50% 100%;
   }
-
   50% {
     background-position:
-      18% 12%,
-      82% 78%,
-      50% 72%;
+      15% 10%,
+      85% 80%,
+      50% 70%;
   }
-
   100% {
     background-position:
       0% 0%,

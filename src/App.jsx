@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
+import React from "react";
 import LandingPage from "./pages/Landing/LandingPage";
 import LoginPage from "./pages/Login/LoginPage";
 import SignUpPage from "./pages/SignUp/SignUpPage";
@@ -8,7 +8,7 @@ import Dashboard from "./pages/Dashboard/Dashboard";
 import History from "./pages/History/History";
 import Profile from "./pages/Profile/Profile";
 import ProfileEdit from "./pages/Profile/ProfileEdit";
-import Onboarding from "./pages/Onboarding/Onboarding";
+import Onboarding from "./pages/Onboarding/Oboarding"
 import Suggestions from "./pages/Suggestions/Suggestions";
 
 export default function App() {
